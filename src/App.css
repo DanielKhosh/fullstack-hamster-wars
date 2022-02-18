@@ -1,38 +1,120 @@
 .App {
-  text-align: center;
+  padding: 0em 2em;
+  align-items: center;
+  width: 100%;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navMenu {
+  display: flex;
+  padding: 0em 2em 0.2em 2em;
+  background-color: antiquewhite;
+  flex-grow: 1;
+  
+  border-radius: 10px 10px 30px 30px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  display: flex;
+  flex-direction: row;
+  padding: 0em 2em 0.2em 2em;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  font-variant: all-small-caps;
+  margin: auto;
+
+}
+
+.txtPlay {
+  display: inline;
+  padding: 0em;
+  margin: auto;
+  color: #2678C0;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  font-family: monospace;
+  color: lightblue;
+  font-size: 3em;
+  margin: 0.2em 0;
+}
+
+li {
+  padding: 0em 1em;
+  margin: auto;
+  
+}
+
+.playButton, .startButton {
+  font-size: 1.5em;
+  margin: auto;
+  color: #2678C0;
+}
+
+main {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.battleWrapper {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+
+
+Link {
+  align-items: flex-end;
+}
+
+
+
+
+.gallery {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap:2em;
+  list-style-type: none;
+  height: 50px;
+  width: auto;
+  margin-top: 5vh;
+
+}
+
+.galleryCard {
+ padding-top: 2em;
+ background-color:lightblue;
+ 
+}
+
+.galleryCard img, .battleWrapper li img {
+  width: auto;
+  height: 10em;
+}
+
+.startButton { 
+  margin: auto;
+  width: 5em;
+;
 }
