@@ -2,10 +2,6 @@ import { Hamster } from '../../models/Hamster'
 import { useEffect, useState } from 'react'
 import AddHamsters from './AddHamster'
 
-// import hamsters from '../../atoms/hamsters'
-
-// import { useRecoilState } from 'recoil'
-
 
 const HamsterGallery = () => {
 
