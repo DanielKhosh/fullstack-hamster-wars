@@ -2,19 +2,17 @@ import { Link } from "react-router-dom"
 import CutestHamster from "./CutestHamster"
 
 const Start = () => (
-
-
     <div>
-        <p> The game is simple - click on the hamster you think is cuter.
-            The prettiest hamster gets cheese supplies for life. <br/> 
-            Click  <Link className="txtPlay" to="/play">Play</Link> to begin.
+        <p> In a place where Cute Rules the world. the cutest hamster king calls on you to chose the next role of this world and bring peace and order to this land.<br/> 
         </p>
-        <h3>This one is the cutest hamster at the moment</h3>
+        <p>
+        Press <Link className="txtPlay" to="/play">Play</Link> to start.
+        </p>
+        <h3>The king hamster orders you to do him this one faver</h3>
         <div className="winner">
             <CutestHamster/>
         </div>
     </div>
-
 )
 
 export default Start

@@ -1,12 +1,9 @@
 .App {
-  padding: 0em 2em;
+  padding: 3rem 1rem 1rem ;
   align-items: center;
   width: 100%;
-  
 }
-
 .wrapper {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,24 +11,27 @@
 
 .navMenu {
   display: flex;
-  padding: 0em 2em 0.2em 2em;
-  background-color: antiquewhite;
+  padding: 0.3rem 1rem 0.3rem;
+  background-color: darkcyan;
+  border-radius: 50px;
   flex-grow: 1;
-  
-  border-radius: 10px 10px 30px 30px;
-  
 }
 
 a {
   display: flex;
   flex-direction: row;
-  padding: 0em 2em 0.2em 2em;
+  padding: 0.5rem 4rem 0.5rem;
   list-style-type: none;
   text-decoration: none;
-  color: black;
+  color: orange;
   font-variant: all-small-caps;
   margin: auto;
-
+  border-radius: 50px;
+  font-size: 140%;
+  text-align: center;
+}
+a:hover{
+  background-color: lightcyan;
 }
 
 .txtPlay {
@@ -49,8 +49,8 @@ a:hover {
 
 h1 {
   text-align: center;
-  font-family: monospace;
-  color: lightblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:orange;
   font-size: 3em;
   margin: 0.2em 0;
 }
@@ -61,10 +61,8 @@ li {
   
 }
 
-.playButton, .startButton {
-  font-size: 1.5em;
+.playButton {
   margin: auto;
-  color: #2678C0;
 }
 
 main {
@@ -117,4 +115,8 @@ Link {
   margin: auto;
   width: 5em;
 ;
+}
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1rem 10rem 1rem;
 }
