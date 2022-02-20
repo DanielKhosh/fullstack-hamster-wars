@@ -25,7 +25,6 @@ const CutestHamster = () => {
 
     return (
         <div>
-
             < section>
                 {cutestHamster ?
                     cutestHamster.map(hamster => (
@@ -37,7 +36,7 @@ const CutestHamster = () => {
                                 key={hamster.id} />
                             <br />
                             <p>{hamster.name}</p>
-                            <p>His score is: {`${hamster.wins - hamster.defeats}`} (Final score = wins - defeats) </p>
+                            <p>the hamsters score is: {`${hamster.wins - hamster.defeats}`} </p>
                         </section>
 
                     ))
@@ -56,8 +55,8 @@ const CutestHamster = () => {
             console.log('This is a cutest hamster')
             if (!response.ok) {
                 throw new Error(response.statusText)
-            } else {
-
+            }
+             else {
                 const data = await response.json()
                 theCutestHamster(data)
 

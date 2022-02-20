@@ -12,7 +12,6 @@ const HamsterGallery = () => {
         async function send() {
             await getHamsters(setOurHamster)
         }
-
         send()
     }, [])
 
@@ -36,8 +35,6 @@ const HamsterGallery = () => {
             <AddHamsters />
             < section className="gallery" >
 
-
-
                 {ourHamster ?
                     ourHamster.map(hamster => (
 
@@ -48,7 +45,8 @@ const HamsterGallery = () => {
                                 key={hamster.id} />
                             <br />
                             <p>{hamster.name}</p>
-                            <button onClick={() => removeHamster(hamster.id)}>Remove</button>
+                            <p>loves{hamster.loves}</p>
+                            <button className='remove-button' onClick={() => removeHamster(hamster.id)}>Remove</button>
                         </section>
 
                     ))
@@ -62,7 +60,7 @@ const HamsterGallery = () => {
     async function getHamsters(allHamsters: any) {
         const url = '/hamsters'
         const response = await fetch(url)
-        console.log('got data')
+        console.log('got all hamsters')
         const data = await response.json()
         allHamsters(data)
     }
@@ -70,10 +68,3 @@ const HamsterGallery = () => {
 }
 
 export default HamsterGallery
-
-// ili samo '/hamsters'   u url
-
-/* menjani su samo url, nikakve funkcije. 
-Menjan je firebase-kod, proveri na heroku
- da li i je i dalje isti, prvo lokalno probaj, 
- posle push na heroku  */ 

@@ -7,7 +7,6 @@ const cors = require('cors')
 const path = require('path')
 const staticFolder = path.join(__dirname, 'public')
 
-
 // install middleware
 app.use( cors())
 app.use(express.static(__dirname + '/build'))  
@@ -21,7 +20,6 @@ app.use( express.json() )
 app.use('/', express.static(staticFolder)) 
 app.use('/hamsters', hamstersRouter)
 app.use('/img', express.static(path.resolve('backend/public/hamsters/'))) 
-
 
 app.listen(PORT, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env)

@@ -3,11 +3,9 @@ import { Hamster } from "../../models/Hamster"
 
 
 export const imgStyle = {
-    width: '15em',
+    width: '20rem',
     height: 'auto',
-    margin: 'auto',
-    boxShadow: '0px 10px 20px 20px #DBDADA',
-    borderRadius: '25px 60px',
+    margin: '1rem',
 };
 
 
@@ -37,6 +35,8 @@ const Play = () => {
         saveData([playerOne, playerTwo])
     }
 
+    //update the backend winns
+
     const winnerStats = (a: Hamster) => {
 
         fetch(`/hamsters/` + a.id, {
@@ -48,6 +48,8 @@ const Play = () => {
         })
         setWinner(a)
     }
+
+    //uppdate the backend loses
 
     const looserStats = (b: Hamster) => {
 
@@ -70,25 +72,25 @@ const Play = () => {
     const handleClick = (a: Hamster, b: Hamster) => {
         looserStats(b)
         winnerStats(a)
-
     }
 
     console.log(players)
 
     return (
+
+
         <section className='battleWrapper'>
+            {/* om man har valt en vinnare */}
             {winner ?
                 <>
-                    <h3>And the winner is</h3>
+                    <h3>Winner Winner chicken dinner</h3>
                     <br></br>
                     <h2 >{winner?.name}</h2>
                     <img style={imgStyle} src={`/img/${winner.imgName}`} alt={winner.imgName} />
-                    <h2 >He has played {winner?.games} games so far and won {winner?.wins}.</h2>
-                    <h2>This guy lost its charm {winner?.defeats} times.</h2>
-
-                    <button className="startButton" onClick={() => playGame()}>New Match</button>
+                    <h2>He has played {winner?.games} games so far and won {winner?.wins} and lost {winner?.defeats} times.</h2>
+                    <button className="startButton" onClick={() => playGame()}>NEXT BATTLE</button>
                 </> : <>
-                    <h2> Which hamster is cuter? </h2>
+                   <div> <h2> choose the cuter hamster </h2> </div>
                 </>
             }
             <section className='battleWrapper'>
@@ -96,7 +98,6 @@ const Play = () => {
                     <>
                         {
                             !winner && !looser ?
-
                                 players.map(x => (
                                     <article onClick={!showResult ? () => handleClick(x, players?.filter(l => l !== x)[0]) : undefined} key={x.id} >
                                         <li><img style={imgStyle} src={x.imgName.includes('http') ? x.imgName : `/img/${x.imgName}`} alt={x.name} /></li>
@@ -116,43 +117,3 @@ const Play = () => {
 }
 
 export default Play
-
-
-/*
-async function resolvePUT(winner:Hamster) {
-    if (winner.id === winner.id) {
-        console.log('resolvePUT', winner)
-        await fetch(`http://localhost:1337/hamsters/${winner.id}`, {
-            method: 'PUT',
-            body: JSON.stringify({wins: winner.wins + 1, games: winner.games + 1}),
-            headers: {'Content-Type': 'application/json'}
-        });
-
-        await fetch(`http://localhost:1337/hamsters/${looser?.id}`, {
-            method: 'PUT',
-            body: JSON.stringify({ defeats: looser!.defeats + 1, games: looser!.games + 1}),
-            headers: { 'Content-Type': 'application/json '}
-        });
-    }
-}
-*/
-
-
-/*
- 
-      {  players?
-          players.map( x => (
-              <article  key={x.id} onClick={ playGame }>
-                     
-                  <div  style={{padding: 2}} >{x.name} </div>
-                  <img src={`${url}/img/${x.imgName}`} 
-                  style={{padding: 10}}
-                  alt={x.name} 
-                  key={x.id}/>    
-                  
-              </article>
-          ))
-              : 'looking for our contestentes'
-
-          }
-*/

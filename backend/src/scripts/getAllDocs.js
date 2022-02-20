@@ -25,4 +25,5 @@ async function getAll() {
 		array.push(document)
 	})
 	return array
+	
 }

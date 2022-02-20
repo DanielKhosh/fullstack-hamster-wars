@@ -15,7 +15,7 @@ const AddHamsters = () => {
 
     const handleNameChange = (e: string | any) => setNewHamsterName(e.target.value)
     const handleAgeChange = (e: number | any) => {
-        if (e.target.valueAsNumber)
+        if (e.target.valueAsNumber )
             setNewHamsterAge(e.target.valueAsNumber)
     }
     const handleFavFoodChange = (e: string | any) => setNewHamsterFavFood(e.target.value)
@@ -53,16 +53,14 @@ const AddHamsters = () => {
     }
 
     return (
-        <>
-
+        <div className='new-hamster-container'>
             <input type="text" placeholder="Hamster name" value={newHamsterName} onChange={handleNameChange} />
             <input type="number" placeholder="Age" value={newHamsterAge} onChange={handleAgeChange} />
             <input type="text" placeholder="Food" value={newHamsterFavFood} onChange={handleFavFoodChange} />
             <input type="text" placeholder="Loves" value={newHamsterLoves} onChange={handleLovesChange} />
             <input type="text" placeholder="Picture" value={newHamsterImgName} onChange={handleImgNameChange} />
-            <button onClick={() => newHamster()}> YEY NEW Family </button>
-
-        </>
+            <button onClick={() => newHamster()}>ADD NEW</button>
+        </div>
     )
 
 }

@@ -12,6 +12,14 @@ const Start = () => (
         <div className="winner">
             <CutestHamster/>
         </div>
+        <div>
+            <p>
+                To use this app you need to navigate to PLAY with the navbar, or with the link above.
+            </p>
+            <p>
+                This app is used for comparing to random hamsters and than choosing the one that is the cutes this data is than saved on a fire store static api. the winner is base on wins - defeats for a final score.
+            </p>
+        </div>
     </div>
 )
 

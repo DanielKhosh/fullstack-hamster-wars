@@ -10,14 +10,13 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <header>
-            <h1>Hamster-Wars</h1>
+            <h1>Hamster Wars</h1>
             <nav className="navMenu">
               <Link to="/">Start</Link>
               <Link className="playButton" to="/play">Play</Link>
               <Link to="/gallery">Gallery</Link>
             </nav>            
         </header>
-        
         <main>
           <Switch>
             <Route path="/" exact><Start/></Route>
