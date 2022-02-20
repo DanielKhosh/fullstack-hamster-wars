@@ -12,9 +12,9 @@ export const imgStyle = {
 const Play = () => {
 
     const [players, setPlayers] = useState<null | Hamster[]>(null)
+    const [showResult, setShowResult] = useState<boolean>(false)
     const [winner, setWinner] = useState<null | Hamster>(null)
     const [looser, setLooser] = useState<null | Hamster>(null)
-    const [showResult, setShowResult] = useState<boolean>(false)
 
     useEffect(() => {
         getPlayers(setPlayers)
