@@ -83,17 +83,18 @@ const Play = () => {
             {/* om man har valt en vinnare */}
             {winner ?
                 <>
-                    <h3>Winner Winner chicken dinner</h3>
+                    <h2>Winner Winner chicken dinner</h2>
                     <br></br>
-                    <h2 >{winner?.name}</h2>
+                    
+                    <h3> {winner?.name} </h3>
                     <img style={imgStyle} src={`/img/${winner.imgName}`} alt={winner.imgName} />
                     <h2>He has played {winner?.games} games so far and won {winner?.wins} and lost {winner?.defeats} times.</h2>
                     <button className="startButton" onClick={() => playGame()}>NEXT BATTLE</button>
                 </> : <>
+                <h2> choose the cuter hamster </h2>
                 </>
             }
             <section className='battleWrapper'>
-            <h2> choose the cuter hamster </h2>
                 {players ?
                     <div className="playSectionWraper">
                         {
