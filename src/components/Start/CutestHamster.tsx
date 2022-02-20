@@ -25,7 +25,7 @@ const CutestHamster = () => {
 
     return (
         <div>
-            < section>
+            < section className='cutestHamsterSection'>
                 {cutestHamster ?
                     cutestHamster.map(hamster => (
 

@@ -10,7 +10,6 @@ const AddHamsters = () => {
     const [newHamsterLoves, setNewHamsterLoves] = useState<string>('')
     const [newHamsterImgName, setNewHamsterImgName] = useState<string>('')
 
-
     // functions to save changed values
 
     const handleNameChange = (e: string | any) => setNewHamsterName(e.target.value)

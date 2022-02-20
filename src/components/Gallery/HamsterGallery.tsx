@@ -45,7 +45,7 @@ const HamsterGallery = () => {
                                 key={hamster.id} />
                             <br />
                             <p>{hamster.name}</p>
-                            <p>loves{hamster.loves}</p>
+                            <p>loves {hamster.loves}</p>
                             <button className='remove-button' onClick={() => removeHamster(hamster.id)}>Remove</button>
                         </section>
 

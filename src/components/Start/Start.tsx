@@ -5,16 +5,13 @@ const Start = () => (
     <div>
         <p> In a place where Cute Rules the world. the cutest hamster king calls on you to chose the next role of this world and bring peace and order to this land.<br/> 
         </p>
-        <p>
-        Press <Link className="txtPlay" to="/play">Play</Link> to start.
-        </p>
         <h3>The king hamster orders you to do him this one faver</h3>
         <div className="winner">
             <CutestHamster/>
         </div>
         <div>
             <p>
-                To use this app you need to navigate to PLAY with the navbar, or with the link above.
+                To start playing you need to navigate to PLAY with the navbar, or press <Link className="txtPlay" to="/play">Play</Link>.
             </p>
             <p>
                 This app is used for comparing to random hamsters and than choosing the one that is the cutes this data is than saved on a fire store static api. the winner is base on wins - defeats for a final score.

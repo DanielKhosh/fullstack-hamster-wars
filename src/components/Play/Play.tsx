@@ -90,12 +90,12 @@ const Play = () => {
                     <h2>He has played {winner?.games} games so far and won {winner?.wins} and lost {winner?.defeats} times.</h2>
                     <button className="startButton" onClick={() => playGame()}>NEXT BATTLE</button>
                 </> : <>
-                   <div> <h2> choose the cuter hamster </h2> </div>
                 </>
             }
             <section className='battleWrapper'>
+            <h2> choose the cuter hamster </h2>
                 {players ?
-                    <>
+                    <div className="playSectionWraper">
                         {
                             !winner && !looser ?
                                 players.map(x => (
@@ -107,7 +107,7 @@ const Play = () => {
                                 : null
                         }
 
-                    </>
+                    </div>
                     : 'Loading Hamsters ...'
                 }
             </section>
