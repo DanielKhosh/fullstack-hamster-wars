@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import hamsters from "../../atoms/hamsters";
 import { Hamster } from "../../models/Hamster"
 
 
@@ -37,30 +38,32 @@ const Play = () => {
 
     //update the backend winns
 
-    const winnerStats = (a: Hamster) => {
+    const winnerStats = (a:Hamster) => {
 
         fetch(`/hamsters/` + a.id, {
-            method: 'put',
-            body: JSON.stringify({ wins: a.wins + 1, games: a.games + 1 }),
+            method: 'PUT',
+            body: JSON.stringify({ wins: a.wins+1, games: a.games+1 }),
             headers: {
                 "Content-type": "application/json"
             }
         })
         setWinner(a)
+        console.log("uppdate the backend winner")
     }
 
     //uppdate the backend loses
 
-    const looserStats = (b: Hamster) => {
+    const looserStats = (b:Hamster) => {
 
         fetch(`/hamsters/` + b.id, {
-            method: 'put',
-            body: JSON.stringify({ defeats: b.defeats + 1, games: b.games + 1 }),
+            method: 'PUT',
+            body: JSON.stringify({ defeats: b.defeats+1, games: b.games+1 }),
             headers: {
                 "Content-type": "application/json"
             }
         })
         setLooser(b)
+        console.log("uppdate the backend loses")
     }
 
     const playGame = () => {
@@ -88,7 +91,7 @@ const Play = () => {
                     
                     <h3> {winner?.name} </h3>
                     <img style={imgStyle} src={`/img/${winner.imgName}`} alt={winner.imgName} />
-                    <h2>He has played {winner?.games} games so far and won {winner?.wins} and lost {winner?.defeats} times.</h2>
+                    <h2>He has played {winner?.games === 0 ? 1 : winner?.games} games so far and won {winner.wins === 0 ? 1 : winner?.wins } and lost {winner?.defeats} times.</h2>
                     <button className="startButton" onClick={() => playGame()}>NEXT BATTLE</button>
                 </> : <>
                 <h2> choose the cuter hamster </h2>
