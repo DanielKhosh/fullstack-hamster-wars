@@ -36,7 +36,7 @@ const CutestHamster = () => {
                                 key={hamster.id} />
                             <br />
                             <p>{hamster.name}</p>
-                            <p>the hamsters score is: {`${hamster.wins - hamster.defeats}`} </p>
+                            <p>the hamsters score is: {hamster.wins === 0 ? 1 :`${hamster.wins - hamster.defeats}`} </p>
                         </section>
 
                     ))

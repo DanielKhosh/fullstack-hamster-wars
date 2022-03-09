@@ -91,7 +91,7 @@ const Play = () => {
                     
                     <h3> {winner?.name} </h3>
                     <img style={imgStyle} src={`/img/${winner.imgName}`} alt={winner.imgName} />
-                    <h2>He has played {winner?.games === 0 ? 1 : winner?.games} games so far and won {winner.wins === 0 ? 1 : winner?.wins } and lost {winner?.defeats} times.</h2>
+                    <h2>He has played {winner?.games === 0 ? 1 : winner?.games} games so far and won {winner?.wins === 0 ? 1 : winner?.wins } and lost {winner?.defeats} times.</h2>
                     <button className="startButton" onClick={() => playGame()}>NEXT BATTLE</button>
                 </> : <>
                 <h2> choose the cuter hamster </h2>
