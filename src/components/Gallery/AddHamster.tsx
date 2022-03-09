@@ -27,7 +27,6 @@ const AddHamsters = () => {
     
 
     
-    
     // functions to save changed values
     
     const handleNameChange = (e: string | any) =>{
@@ -134,6 +133,7 @@ function isValidAge(age: number): boolean {
 	if( age < 0 ) return false
 	if( isNaN(age) ) return false
 	let ageString = String(age)
+
 	if( ageString.includes(',') || ageString.includes('.')) return false
 	return true
 }
